@@ -1,0 +1,102 @@
+.container{
+    color:#f4f3f1;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+.container2{
+  color:#f4f3f1;
+
+}
+
+.glowing-button-wrap {
+    
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    border-radius: 1;
+  }
+  
+  .glowing-button {
+    white-space: nowrap;
+    margin: 10px;
+    position: relative;
+    background-color: #4db1cc;
+    box-shadow: 0 0 20px 0 #4db1cc;
+    border: 2px solid #4db1cc;
+    padding: 20px 80px;
+    background-color: #000;
+    transition: .4s;
+    font-size: 20px;
+    cursor: pointer;
+    color: #f4f3f1;
+    z-index: 0;
+    border-radius: 1;
+  }
+  
+  .glowing-button::before {
+    content: '';
+    width: 100%;
+    height: calc(50% + 1px);
+    background-color: #4db1cc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 2px solid #4db1cc;
+    transition: .4s;
+    box-shadow: 0 0 20px 0 #4db1cc;
+    z-index: -1;
+    border-radius: 1;
+  }
+  
+  .glowing-button::after {
+    content: '';
+    width: 100%;
+    height: calc(50% + 1px);
+    background-color: #4db1cc;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #4db1cc;
+    transition: .4s;
+    box-shadow: 0 0 20px 0 #4db1cc;
+    z-index: -1;
+    border-radius: 1;
+  }
+  
+  .glowing-button:hover {
+    color: #4db1cc;
+  }
+  
+  .glowing-button:hover::before {
+    width: 30px;
+    height: 10px;
+    top: -5px;
+    left: -5px;
+    transform: skewX(30deg);
+    background-color: #000;
+    border-radius: 1;
+  }
+  
+  .glowing-button:hover::after {
+    width: 30px;
+    height: 10px;
+    bottom: -5px;
+    right: -5px;
+    transform: skewX(-30deg);
+    background-color: #000;
+    border-radius: 1;
+  }
+
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
